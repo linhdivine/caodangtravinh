@@ -1,0 +1,45 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+body {
+	font-family: 'Roboto', arial, sans-serif;
+}
+
+.navbar-menu {
+    min-height: 40px;
+    background-color: #2e9bfc;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: none;
+}
+.main-menu {
+	.navbar-nav {
+		.active a {
+			background-color: #D33;
+		}
+		li {
+			margin-right: 5px;
+			a {
+				font-size: 12px;
+				font-weight: bold;
+				padding: 10px 15px;
+				text-align: center;
+				color: #FFF;
+				display: block;
+				&:hover{
+					background-color: #D33;
+				}
+				&:focus {
+					background-color: #D33;
+				} 
+			}
+		} 
+	}
+}
