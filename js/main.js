@@ -22,6 +22,32 @@ $(function() {
 });
 
 $(function() {
+    $('.wrapper-student-home').owlCarousel({
+        loop: true,
+        nav: false,
+        dots: false,
+        margin: 20,
+        smartSpeed: 500,
+        items: 3,
+        autoplay: true,
+        autoplayTimeout: 2000,
+        navText: ['<i class="fal fa-chevron-circle-left"></i>', '<i class="fal fa-chevron-circle-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+});
+
+
+$(function() {
     $('.counter').each(function() {
         var $this = $(this),
             countTo = $this.attr('data-count');
@@ -434,3 +460,8 @@ $(function() {
         });
     })(jQuery);
 
+
+
+$(function() {
+    new WOW().init();
+});
