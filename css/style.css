@@ -3,6 +3,11 @@
   margin: 0;
 }
 
+h1, h2, h3, h4, h5 {
+  margin: 0;
+  padding: 0;
+}
+
 ul,
 ol {
   margin: 0;
@@ -12,6 +17,7 @@ ol {
 img {
   max-width: 100%;
   display: block;
+  vertical-align: middle;
 }
 
 body {
@@ -262,7 +268,7 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
 .slider {
   width: 100%;
   height: auto;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 .slider .slide-adv {
   display: block;
@@ -273,15 +279,8 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   height: 400px;
   display: block;
 }
-.slider .slide-adv .item .img-content {
-  display: block;
-  width: 100%;
-  margin: auto;
+.slider .slide-adv .item img {
   height: 100%;
-  background-color: #999;
-  text-align: center;
-  font-size: 50px;
-  vertical-align: middle;
 }
 .slider .slide-adv .owl-nav {
   top: 40%;
@@ -310,16 +309,16 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   width: 100%;
   height: auto;
   display: block;
-  padding-bottom: 35px;
+  padding-bottom: 25px;
 }
 
 .title-home {
   display: block;
   width: 100%;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 15px;
 }
-.title-home h2 {
+.title-home h1, .title-home h2 {
   color: #2E9BFC;
   font-size: 28px;
   text-transform: uppercase;
@@ -358,6 +357,7 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   width: 100%;
   height: 150px;
   display: block;
+  margin-bottom: 10px;
 }
 .post-news-home .content-image img {
   width: 100%;
@@ -458,21 +458,25 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   color: #464646;
   font-size: 16px;
 }
+.wrapper-student-home .post-student .content-info a h4 {
+  margin-bottom: 10px;
+}
 
 .wrapper-footer {
   width: 100%;
   display: block;
   background-color: #0e4e96;
-  padding: 40px 0;
+  padding: 20px 0;
 }
 
 .title-footer {
   width: 100%;
   display: block;
+  margin-bottom: 15px;
   text-align: center;
-  margin-bottom: 20px;
 }
 .title-footer h3 {
+  margin-bottom: 5px;
   color: #FFF;
   font-size: 18px;
   text-transform: uppercase;
@@ -480,8 +484,8 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
 .title-footer .border-footer {
   width: 200px;
   height: 3px;
-  background-image: linear-gradient(to right bottom, #FFF, #999);
   margin: 0 auto;
+  background-image: linear-gradient(to right bottom, #FFF, #999);
 }
 
 .goole-maps {
@@ -501,6 +505,10 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   height: 100%;
 }
 
+.list-address {
+  text-align: center;
+  margin-left: 45px;
+}
 .list-address ul {
   list-style: none;
   display: inline-block;
@@ -520,7 +528,8 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
 }
 
 .list-link-footer {
-  text-align: justify;
+  margin-left: 20px;
+  text-align: center;
   display: block;
   width: 100%;
 }
@@ -533,9 +542,105 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   margin-bottom: 5px;
 }
 .list-link-footer ul li a {
+  text-align: justify;
   color: #FFF;
   display: block;
   font-size: 14px;
+}
+
+.news-content {
+  display: block;
+  padding-bottom: 25px;
+  width: 100%;
+}
+
+.latest-news {
+  margin-bottom: 20px;
+}
+.latest-news .title-news {
+  margin-bottom: 15px;
+  display: block;
+  width: 100%;
+}
+.latest-news .title-news h2 {
+  font-size: 20px;
+  color: #464646;
+  text-transform: uppercase;
+}
+.latest-news::after {
+  margin-top: 15px;
+  content: "";
+  display: block;
+  width: 100%;
+  padding: 1px 0;
+  background-color: #42A7EF;
+}
+
+.wrapper-latest-news .content-image {
+  padding-right: 0;
+}
+.wrapper-latest-news .content-image a {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.wrapper-latest-news .content-image a img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper-latest-news .content-info span {
+  color: #868686;
+  display: inline-block;
+  font-size: 12px;
+  margin-bottom: 7.5px;
+}
+.wrapper-latest-news .content-info h4 {
+  color: #464646;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.wrapper-latest-news .content-info p {
+  color: #464646;
+  font-size: 14px;
+}
+.wrapper-latest-news .content-info a {
+  display: block;
+  color: #42A7EF;
+  text-decoration: none;
+}
+.wrapper-latest-news .content-info a span {
+  color: #42A7EF;
+  font-size: 18px;
+}
+
+.post-category-news {
+  width: 100%;
+  min-height: 415px;
+  display: block;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+.post-category-news .content-image {
+  width: 365px;
+  height: 245px;
+  display: block;
+  margin-bottom: 10px;
+}
+.post-category-news .content-image img {
+  height: 100%;
+}
+.post-category-news .content-image img:hover {
+  transform: scale(1.3);
+  opacity: 0.7;
+}
+.post-category-news .content-info a {
+  display: block;
+  color: #464646;
+  font-size: 18px;
+  margin-bottom: 7.5px;
+}
+.post-category-news .content-info span {
+  color: #868686;
 }
 
 /*# sourceMappingURL=style.css.map */
