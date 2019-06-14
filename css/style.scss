@@ -826,7 +826,22 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
     .title-detail {
         width: 100%;
         margin-bottom: 15px;
-
+        h1 {
+          font-size: 24px;
+        }
+        .entry-meta {
+          span {
+            margin-right: 5px;
+            display: inline-block;
+          }
+        }
+        &::after {
+          content: "";
+          height: 2px;
+          display: block;
+          width: 100%;
+          background-color: #f1f1f1;
+        }
     }
 
 
@@ -850,10 +865,10 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
     clear: both;
 }
 
-.sidebar-left {
+.left-sidebar {
     display: block;
     background-color: #f0f0f0;
-    height: 120vh;
+    height: 100vh;
 }
 
 .title-sidebar {

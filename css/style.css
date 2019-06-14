@@ -727,6 +727,20 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   width: 100%;
   margin-bottom: 15px;
 }
+.main-content .title-detail h1 {
+  font-size: 24px;
+}
+.main-content .title-detail .entry-meta span {
+  margin-right: 5px;
+  display: inline-block;
+}
+.main-content .title-detail::after {
+  content: "";
+  height: 2px;
+  display: block;
+  width: 100%;
+  background-color: #f1f1f1;
+}
 .main-content .content {
   width: 75%;
   float: left;
@@ -745,10 +759,10 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   clear: both;
 }
 
-.sidebar-left {
+.left-sidebar {
   display: block;
   background-color: #f0f0f0;
-  height: 120vh;
+  height: 100vh;
 }
 
 .title-sidebar {
