@@ -24,14 +24,14 @@ $(function() {
 $(function() {
     $('.wrapper-student-home').owlCarousel({
         loop: true,
-        nav: false,
+        nav: true,
         dots: false,
         margin: 20,
         smartSpeed: 500,
-        items: 3,
+        items: 4,
         autoplay: true,
-        autoplayTimeout: 2000,
-        navText: ['<i class="fal fa-chevron-circle-left"></i>', '<i class="fal fa-chevron-circle-right"></i>'],
+        autoplayTimeout: 4000,
+        navText: ['<i class="fal fa-chevron-double-left"></i>', '<i class="fal fa-chevron-double-right"></i>'],
         responsive: {
             0: {
                 items: 1
