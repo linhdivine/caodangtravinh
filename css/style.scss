@@ -853,7 +853,7 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
         }
     }
     .content {
-        width: 75%;
+        width: 65%;
         float: left;
         padding-right: 20px;
         margin-bottom: 25px;
@@ -861,7 +861,7 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
 
     .footer-detail {
         float: left;
-        width: 25%;
+        width: 35%;
         padding: 0 10px;
         background-color: #f0f0f0;
     }
@@ -910,7 +910,6 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
         display: block;
         margin: auto;
         list-style: none;
-
         li {
             border-bottom: 1px solid #dfdfdf;
             display: block;
@@ -927,7 +926,13 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
     }
 }
 
-
+.copy {
+  padding: 7.5px 0;
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+}
 
 
 
