@@ -33,15 +33,16 @@ body {
     padding: 2px 0;
     color: #6DDB07;
     float: left;
-    width:  10%
+    width: 10%
 }
 
 .logo a {
-  margin-top: -15px;
-  display: block;
-  img {
-    margin: auto;
-  }
+    margin-top: -15px;
+    display: block;
+
+    img {
+        margin: auto;
+    }
 }
 
 nav {
@@ -87,15 +88,12 @@ nav {
 }
 
 #cssmenu {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 #cssmenu .navbars {
     width: 90%;
     float: left;
-    background-color: #f0f0f0;
-    border-top: 1px solid #dfdfdf;
-    border-bottom: 1px solid #dfdfdf;
 
 }
 
@@ -111,11 +109,6 @@ nav {
     text-decoration: none;
     color: #333;
     font-weight: bold;
-    border-left: 1px solid #dfdfdf;
-
-    &:last-child {
-        border-right: 1px solid #dfdfdf;
-    }
 }
 
 
@@ -829,29 +822,34 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
 
 
 .main-content {
-  padding-right: 0;
-  height: auto;
+    padding-right: 0;
+    height: auto;
+
     .title-detail {
         width: 100%;
         margin-bottom: 15px;
+
         h1 {
-          font-size: 24px;
+            font-size: 24px;
         }
+
         .entry-meta {
-          span {
-            margin-right: 5px;
-            display: inline-block;
-            color: #868686;
-          }
+            span {
+                margin-right: 5px;
+                display: inline-block;
+                color: #868686;
+            }
         }
+
         &::after {
-          content: "";
-          height: 2px;
-          display: block;
-          width: 100%;
-          background-color: #f1f1f1;
+            content: "";
+            height: 2px;
+            display: block;
+            width: 100%;
+            background-color: #f1f1f1;
         }
     }
+
     .content {
         width: 65%;
         float: left;
@@ -910,6 +908,7 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
         display: block;
         margin: auto;
         list-style: none;
+
         li {
             border-bottom: 1px solid #dfdfdf;
             display: block;
@@ -926,11 +925,146 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
     }
 }
 
-.copy {
-  padding: 7.5px 0;
+.title-about {
+    .border-title {
+        span {
+            font-size: 30px;
+        }
+        .boder-home {
+            margin: 0 5px;
+        }
+    }
+}
+
+.main-about {
+  padding: 0;
+}
+.section-about {
+  padding: 0 10px;
+  margin-bottom: 20px;
+  h2 {
+    font-size: 20px;
+    color: #f00;
+    margin-bottom: 15px;
+  }
   p {
-    font-size: 14px;
-    margin: 0;
+    
+  }
+}
+.post-about {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    .content-image {
+        height: 350px;
+        img {
+            height: 100%;
+        }
+    }
+    .custom-col-image {
+      padding-right: 0;
+    }
+    .translate-right {
+        padding-left: 0;
+        padding-right: 15px;
+        float: right;
+    }
+
+    .content-info {
+        h4 {
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-size: 20px;
+            color: #464646;
+        }
+        p {
+          font-size: 14px;
+          color: #42a7ef;
+        }
+    }
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+// contact 
+.row-contact {
+  padding-bottom: 25px;
+}
+.post-contact {
+  width: 75%;
+  display: block;
+  margin: 0 auto;  
+  .icon {
+    font-size: 50px;
+    color: gold;
+    text-align: center;
+  }
+  .icon-info {
+   text-align: center;
+    h4 {    
+      font-size: 20px;
+      color: #333;
+    }
+  }
+}
+
+.custom-fields {
+  margin-bottom: 15px;
+  &:first-child {
+    padding-left: 0;
+  }
+  &:last-child {
+    padding-right: 0;
+  }
+}
+.map-contacct {
+  padding-top: 20px;
+  width: 100%;
+  height: 350px;
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.text-content-contact {
+    textarea {
+      height: 250px;
+    }  
+ }
+
+
+//  trang thư viện ảnh
+
+.content-gallery {
+  padding-bottom: 35px;
+}
+
+ .gallery-1 {
+  padding-bottom: 45px; 
+ }
+
+.row-gallery {
+  padding-bottom: 25px;
+  .image {
+    display: block;
+    width: 100%;
+    height: 250px;
+    a {
+      img {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        transition: 1s all ease;
+        &:hover {
+          box-shadow: 0 15px 20px #969696;
+          transform: translateY(-35px);
+        }
+      }
+    }
   }
 }
 
@@ -941,11 +1075,15 @@ sub-menu-1 #cssmenu ul ul li:last-child>a,
 
 
 
+.copy {
+    background-color: #ccc;
+    padding: 7.5px 0 7.5px 200px;
 
-
-
-
-
+    p {
+        font-size: 14px;
+        margin: 0;
+    }
+}
 
 
 

@@ -21,6 +21,44 @@ $(function() {
     });
 });
 
+//.gallery-2
+
+$(function() {
+    $('.gallery-2').owlCarousel({
+        loop: true,
+        nav: true,
+        dots: false,
+        margin: 15,
+        smartSpeed: 500,
+        items: 4,
+        autoplay: true,
+        autoplayTimeout: 4000,
+        navText: ['<i class="fal fa-chevron-double-left"></i>', '<i class="fal fa-chevron-double-right"></i>'],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 2
+            },
+            1000: {
+                items: 4
+            }
+        }
+    });
+});
+$(document).ready(function() {
+    $('.row-gallery').each(function() { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: 'a', // the selector for gallery item
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
+        });
+    });
+});
+
 $(function() {
     $('.wrapper-student-home').owlCarousel({
         loop: true,
@@ -76,14 +114,14 @@ $(function() {
 
 $(function() {
     $('.left-sidebar').StickySidebar({
-       // Settings
-       additionalMarginTop: 40
-     });
+        // Settings
+        additionalMarginTop: 40
+    });
 });
 
 
-(function ($) {
-    $.fn.StickySidebar = function (options) {
+(function($) {
+    $.fn.StickySidebar = function(options) {
         var defaults = {
             'containerSelector': '',
             'additionalMarginTop': 0,
@@ -106,8 +144,8 @@ $(function() {
             if (!success) {
                 console.log('TST: Body width smaller than options.minWidth. Init is delayed.');
 
-                $(document).scroll(function (options, $that) {
-                    return function (evt) {
+                $(document).scroll(function(options, $that) {
+                    return function(evt) {
                         var success = tryInit(options, $that);
 
                         if (success) {
@@ -115,8 +153,8 @@ $(function() {
                         }
                     };
                 }(options, $that));
-                $(window).resize(function (options, $that) {
-                    return function (evt) {
+                $(window).resize(function(options, $that) {
+                    return function(evt) {
                         var success = tryInit(options, $that);
 
                         if (success) {
@@ -149,7 +187,7 @@ $(function() {
             // Add CSS
             $('head').append($('<style>.StickySidebar:after {content: ""; display: table; clear: both;}</style>'));
 
-            $that.each(function () {
+            $that.each(function() {
                 var o = {};
 
                 o.sidebar = $(this);
@@ -198,16 +236,14 @@ $(function() {
                 if (collapsedTopHeight == 0) {
                     o.stickySidebar.css('padding-top', 0);
                     o.stickySidebarPaddingTop = 0;
-                }
-                else {
+                } else {
                     o.stickySidebarPaddingTop = 1;
                 }
 
                 if (collapsedBottomHeight == 0) {
                     o.stickySidebar.css('padding-bottom', 0);
                     o.stickySidebarPaddingBottom = 0;
-                }
-                else {
+                } else {
                     o.stickySidebarPaddingBottom = 1;
                 }
 
@@ -220,7 +256,7 @@ $(function() {
                 // Set sidebar to default values.
                 resetSidebar();
 
-                o.onScroll = function (o) {
+                o.onScroll = function(o) {
                     // Stop if the sidebar isn't visible.
                     if (!o.stickySidebar.is(":visible")) {
                         return;
@@ -262,8 +298,7 @@ $(function() {
                         var sidebarSmallerThanWindow = (o.stickySidebar.outerHeight() + offsetTop + offsetBottom) < $(window).height();
                         if (sidebarSmallerThanWindow) {
                             windowOffsetBottom = windowOffsetTop + o.stickySidebar.outerHeight();
-                        }
-                        else {
+                        } else {
                             windowOffsetBottom = $(window).height() - o.marginBottom - o.paddingBottom - options.additionalMarginBottom;
                         }
 
@@ -290,8 +325,7 @@ $(function() {
 
                         if (scrollTopDiff > 0) { // If the user is scrolling up.
                             top = Math.min(top, windowOffsetTop);
-                        }
-                        else { // If the user is scrolling down.
+                        } else { // If the user is scrolling down.
                             top = Math.max(top, windowOffsetBottom - o.stickySidebar.outerHeight());
                         }
 
@@ -304,15 +338,12 @@ $(function() {
 
                         if (!sidebarSameHeightAsContainer && top == windowOffsetTop) {
                             position = 'fixed';
-                        }
-                        else if (!sidebarSameHeightAsContainer && top == windowOffsetBottom - o.stickySidebar.outerHeight()) {
+                        } else if (!sidebarSameHeightAsContainer && top == windowOffsetBottom - o.stickySidebar.outerHeight()) {
                             position = 'fixed';
-                        }
-                        else if (scrollTop + top - o.sidebar.offset().top - o.paddingTop <= options.additionalMarginTop) {
+                        } else if (scrollTop + top - o.sidebar.offset().top - o.paddingTop <= options.additionalMarginTop) {
                             // Stuck to the top of the page. No special behavior.
                             position = 'static';
-                        }
-                        else {
+                        } else {
                             // Stuck to the bottom of the page.
                             position = 'absolute';
                         }
@@ -329,8 +360,7 @@ $(function() {
                             'top': top,
                             'left': o.sidebar.offset().left + parseInt(o.sidebar.css('padding-left'))
                         });
-                    }
-                    else if (position == 'absolute') {
+                    } else if (position == 'absolute') {
                         var css = {};
 
                         if (o.stickySidebar.css('position') != 'absolute') {
@@ -342,8 +372,7 @@ $(function() {
                         css.left = '';
 
                         o.stickySidebar.css(css);
-                    }
-                    else if (position == 'static') {
+                    } else if (position == 'static') {
                         resetSidebar();
                     }
 
@@ -362,14 +391,14 @@ $(function() {
                 o.onScroll(o);
 
                 // Recalculate the sidebar's position on every scroll and resize.
-                $(document).scroll(function (o) {
-                    return function () {
+                $(document).scroll(function(o) {
+                    return function() {
                         o.onScroll(o);
                     };
                 }(o));
-                $(window).resize(function (o) {
-                    return function () {
-                        o.stickySidebar.css({'position': 'static'});
+                $(window).resize(function(o) {
+                    return function() {
+                        o.stickySidebar.css({ 'position': 'static' });
                         o.onScroll(o);
                     };
                 }(o));
@@ -390,7 +419,7 @@ $(function() {
                 function getClearedHeight(e) {
                     var height = e.height();
 
-                    e.children().each(function () {
+                    e.children().each(function() {
                         height = Math.max(height, $(this).height());
                     });
 
@@ -402,68 +431,66 @@ $(function() {
 })(jQuery);
 
 
- (function($) {
-        $.fn.menumaker = function(options) {
-            var cssmenu = $(this),
-                settings = $.extend({
-                    format: "dropdown",
-                    sticky: false
-                }, options);
-            return this.each(function() {
-                $(this).find(".button").on('click', function() {
-                    $(this).toggleClass('menu-opened');
-                    var mainmenu = $(this).next('ul');
-                    if (mainmenu.hasClass('open')) {
-                        mainmenu.slideToggle().removeClass('open');
+(function($) {
+    $.fn.menumaker = function(options) {
+        var cssmenu = $(this),
+            settings = $.extend({
+                format: "dropdown",
+                sticky: false
+            }, options);
+        return this.each(function() {
+            $(this).find(".button").on('click', function() {
+                $(this).toggleClass('menu-opened');
+                var mainmenu = $(this).next('ul');
+                if (mainmenu.hasClass('open')) {
+                    mainmenu.slideToggle().removeClass('open');
+                } else {
+                    mainmenu.slideToggle().addClass('open');
+                    if (settings.format === "dropdown") {
+                        mainmenu.find('ul').show();
+                    }
+                }
+            });
+            cssmenu.find('li ul').parent().addClass('has-sub');
+            multiTg = function() {
+                cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
+                cssmenu.find('.submenu-button').on('click', function() {
+                    $(this).toggleClass('submenu-opened');
+                    if ($(this).siblings('ul').hasClass('open')) {
+                        $(this).siblings('ul').removeClass('open').slideToggle();
                     } else {
-                        mainmenu.slideToggle().addClass('open');
-                        if (settings.format === "dropdown") {
-                            mainmenu.find('ul').show();
-                        }
+                        $(this).siblings('ul').addClass('open').slideToggle();
                     }
                 });
-                cssmenu.find('li ul').parent().addClass('has-sub');
-                multiTg = function() {
-                    cssmenu.find(".has-sub").prepend('<span class="submenu-button"></span>');
-                    cssmenu.find('.submenu-button').on('click', function() {
-                        $(this).toggleClass('submenu-opened');
-                        if ($(this).siblings('ul').hasClass('open')) {
-                            $(this).siblings('ul').removeClass('open').slideToggle();
-                        } else {
-                            $(this).siblings('ul').addClass('open').slideToggle();
-                        }
-                    });
-                };
-                if (settings.format === 'multitoggle') multiTg();
-                else cssmenu.addClass('dropdown');
-                if (settings.sticky === true) cssmenu.css('position', 'fixed');
-                resizeFix = function() {
-                    var mediasize = 768;
-                    if ($(window).width() > mediasize) {
-                        cssmenu.find('ul').show();
-                    }
-                    if ($(window).width() <= mediasize) {
-                        cssmenu.find('ul').hide().removeClass('open');
-                    }
-                };
-                resizeFix();
-                return $(window).on('resize', resizeFix);
-            });
-        };
-    })(jQuery);
-
-    (function($) {
-        $(document).ready(function() {
-            $("#cssmenu").menumaker({
-                format: "multitoggle"
-            });
+            };
+            if (settings.format === 'multitoggle') multiTg();
+            else cssmenu.addClass('dropdown');
+            if (settings.sticky === true) cssmenu.css('position', 'fixed');
+            resizeFix = function() {
+                var mediasize = 768;
+                if ($(window).width() > mediasize) {
+                    cssmenu.find('ul').show();
+                }
+                if ($(window).width() <= mediasize) {
+                    cssmenu.find('ul').hide().removeClass('open');
+                }
+            };
+            resizeFix();
+            return $(window).on('resize', resizeFix);
         });
-    })(jQuery);
+    };
+})(jQuery);
+
+(function($) {
+    $(document).ready(function() {
+        $("#cssmenu").menumaker({
+            format: "multitoggle"
+        });
+    });
+})(jQuery);
 
 
 
 $(function() {
     new WOW().init();
 });
-
-

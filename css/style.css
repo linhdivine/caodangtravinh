@@ -93,9 +93,6 @@ nav {
 #cssmenu .navbars {
   width: 90%;
   float: left;
-  background-color: #f0f0f0;
-  border-top: 1px solid #dfdfdf;
-  border-bottom: 1px solid #dfdfdf;
 }
 
 #cssmenu > ul > li {
@@ -108,10 +105,6 @@ nav {
   text-decoration: none;
   color: #333;
   font-weight: bold;
-  border-left: 1px solid #dfdfdf;
-}
-#cssmenu > ul > li > a:last-child {
-  border-right: 1px solid #dfdfdf;
 }
 
 #cssmenu ul li.active ul li a {
@@ -821,8 +814,137 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   padding: 12px 10px;
 }
 
+.title-about .border-title span {
+  font-size: 30px;
+}
+.title-about .border-title .boder-home {
+  margin: 0 5px;
+}
+
+.main-about {
+  padding: 0;
+}
+
+.section-about {
+  padding: 0 10px;
+  margin-bottom: 20px;
+}
+.section-about h2 {
+  font-size: 20px;
+  color: #f00;
+  margin-bottom: 15px;
+}
+.post-about {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.post-about .content-image {
+  height: 350px;
+}
+.post-about .content-image img {
+  height: 100%;
+}
+.post-about .custom-col-image {
+  padding-right: 0;
+}
+.post-about .translate-right {
+  padding-left: 0;
+  padding-right: 15px;
+  float: right;
+}
+.post-about .content-info h4 {
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #464646;
+}
+.post-about .content-info p {
+  font-size: 14px;
+  color: #42a7ef;
+}
+.post-about::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.row-contact {
+  padding-bottom: 25px;
+}
+
+.post-contact {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+}
+.post-contact .icon {
+  font-size: 50px;
+  color: gold;
+  text-align: center;
+}
+.post-contact .icon-info {
+  text-align: center;
+}
+.post-contact .icon-info h4 {
+  font-size: 20px;
+  color: #333;
+}
+
+.custom-fields {
+  margin-bottom: 15px;
+}
+.custom-fields:first-child {
+  padding-left: 0;
+}
+.custom-fields:last-child {
+  padding-right: 0;
+}
+
+.map-contacct {
+  padding-top: 20px;
+  width: 100%;
+  height: 350px;
+}
+.map-contacct iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.text-content-contact textarea {
+  height: 250px;
+}
+
+.content-gallery {
+  padding-bottom: 35px;
+}
+
+.gallery-1 {
+  padding-bottom: 45px;
+}
+
+.row-gallery {
+  padding-bottom: 25px;
+}
+.row-gallery .image {
+  display: block;
+  width: 100%;
+  height: 250px;
+}
+.row-gallery .image a img {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  transition: 1s all ease;
+}
+.row-gallery .image a img:hover {
+  box-shadow: 0 15px 20px #969696;
+  transform: translateY(-35px);
+}
+
 .copy {
-  padding: 7.5px 0;
+  background-color: #ccc;
+  padding: 7.5px 0 7.5px 200px;
 }
 .copy p {
   font-size: 14px;
