@@ -931,6 +931,10 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
   width: 100%;
   height: 250px;
 }
+.row-gallery .image a {
+  display: block;
+  margin-bottom: 15px;
+}
 .row-gallery .image a img {
   margin: 0 auto;
   width: 100%;
@@ -940,6 +944,11 @@ sub-menu-1 #cssmenu ul ul li:last-child > a,
 .row-gallery .image a img:hover {
   box-shadow: 0 15px 20px #969696;
   transform: translateY(-35px);
+}
+.row-gallery .image h4 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #464646;
 }
 
 .copy {
