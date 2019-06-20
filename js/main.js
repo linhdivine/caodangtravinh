@@ -494,3 +494,22 @@ $(function() {
 $(function() {
     new WOW().init();
 });
+
+
+// header-sticky
+
+
+
+$(window).scroll(function() {
+    var top = $(document).scrollTop();
+    var height = 300;
+    var screen = $(window).width();
+    if (top < height) {
+        $('.header-sticky').removeClass('menu-fixed-top');
+    } else {
+        $('.header-sticky').addClass('menu-fixed-top');
+        if (screen <= 767) {
+            $('.header-sticky').removeClass('menu-fixed-top');
+        }
+    }
+});
